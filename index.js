@@ -20,7 +20,7 @@ exports.connect = function (topic, cb) {
 
   net.on('connection', (socket, details) => {
     if (details.peer)
-    console.log('connected to', details.peer.host, details.peer.port)
+    console.log('[AIRPIPE] connected to', details.peer.host, details.peer.port)
     cb(null, socket)
 
     // we have received everything
